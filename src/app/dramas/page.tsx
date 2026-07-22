@@ -10,11 +10,11 @@ function cn(...inputs: ClassValue[]) {
 }
 
 const mockDramas = [
-  { title: "Hospital Playlist", year: 2020, episodes: 12, genre: "Medical / Slice of Life", rating: 4.9, image: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&auto=format&fit=crop&q=60", link: "https://www.tving.com/search?keyword=%EC%8A%AC%EA%B8%B0%EB%A1%9C%EC%9A%B4%20%EC%9D%98%EC%82%AC%EC%83%9D%ED%99%9C" },
-  { title: "Doctor Slump", year: 2024, episodes: 16, genre: "Medical / Rom-Com", rating: 4.8, image: "https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?w=800&auto=format&fit=crop&q=60", link: "https://www.tving.com/search?keyword=%EB%8B%A5%ED%84%B0%EC%8A%AC%EB%9F%BC%ED%94%84" },
-  { title: "Moving", year: 2023, episodes: 20, genre: "Action / Sci-Fi", rating: 4.9, image: "https://images.unsplash.com/photo-1618365908648-e71bd5716cba?w=800&auto=format&fit=crop&q=60", link: "https://www.tving.com/search?keyword=%EB%AC%B4%EB%B9%99" },
-  { title: "D.P.", year: 2021, episodes: 6, genre: "Military / Drama", rating: 4.7, image: "https://images.unsplash.com/photo-1601628828688-632f38a5a7d0?w=800&auto=format&fit=crop&q=60", link: "https://www.tving.com/search?keyword=D.P." },
-  { title: "Weak Hero Class 1", year: 2022, episodes: 8, genre: "Action / Youth", rating: 4.8, image: "https://images.unsplash.com/photo-1555626906-fcf10d6851b4?w=800&auto=format&fit=crop&q=60", link: "https://www.tving.com/search?keyword=%EC%95%BD%ED%95%9C%EC%98%81%EC%9B%85" },
+  { title: "선재 업고 튀어", year: 2024, episodes: 16, genre: "Time Slip / Rom-Com", rating: 4.9, image: "https://images.unsplash.com/photo-1518621736915-f3b1c41bfd00?w=800&auto=format&fit=crop&q=60", link: "https://www.tving.com/search?keyword=%EC%84%A0%EC%9E%AC%20%EC%97%85%EA%B3%A0%20%ED%8A%80%EC%96%B4" },
+  { title: "눈물의 여왕", year: 2024, episodes: 16, genre: "Romance / Drama", rating: 4.8, image: "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=800&auto=format&fit=crop&q=60", link: "https://www.tving.com/search?keyword=%EB%88%88%EB%AC%BC%EC%9D%98%20%EC%97%AC%EC%99%95" },
+  { title: "내 남편과 결혼해줘", year: 2024, episodes: 16, genre: "Revenge / Fantasy", rating: 4.9, image: "https://images.unsplash.com/photo-1543807535-eceef0bc6599?w=800&auto=format&fit=crop&q=60", link: "https://www.tving.com/search?keyword=%EB%82%B4%20%EB%82%A8%ED%8E%B8%EA%B3%BC%20%EA%B2%B0%ED%98%BC%ED%95%B4%EC%A4%98" },
+  { title: "이재, 곧 죽습니다", year: 2023, episodes: 8, genre: "Fantasy / Thriller", rating: 4.7, image: "https://images.unsplash.com/photo-1616422285623-13ff0162193c?w=800&auto=format&fit=crop&q=60", link: "https://www.tving.com/search?keyword=%EC%9D%B4%EC%9E%AC%20%EA%B3%A7%20%EC%A3%BD%EC%8A%B5%EB%8B%88%EB%8B%A4" },
+  { title: "피라미드 게임", year: 2024, episodes: 10, genre: "Teen / Psychological", rating: 4.8, image: "https://images.unsplash.com/photo-1577495508048-b635879837f1?w=800&auto=format&fit=crop&q=60", link: "https://www.tving.com/search?keyword=%ED%94%BC%EB%9D%BC%EB%AF%B8%EB%93%9C%20%EA%B2%8C%EC%9E%84" },
 ];
 
 export default function DramaLibrary() {
