@@ -11,9 +11,9 @@ function cn(...inputs: ClassValue[]) {
 }
 
 const mockNews = [
-  { title: "Park Jihoon confirmed for new medical drama...", time: "2 hours ago" },
-  { title: "Hospital Playlist cast reunion hints at possible...", time: "5 hours ago" },
-  { title: "Global streaming numbers hit record highs for K-dramas", time: "8 hours ago" },
+  { title: "[단독] 박지훈, 티빙 '취사병 전설이 되다' 시청률 1위 견인", time: "2 hours ago", link: "https://search.naver.com/search.naver?where=news&query=%EB%B0%95%EC%A7%80%ED%9B%88+%EC%B7%A8%EC%82%AC%EB%B3%91+%EC%A0%84%EC%84%A4%EC%9D%B4+%EB%90%98%EB%8B%A4" },
+  { title: "하반기 최고 기대작 넷플릭스 '동궁', 라인업 완성", time: "5 hours ago", link: "https://search.naver.com/search.naver?where=news&query=%EB%84%B7%ED%94%8C%EB%A6%AD%EC%8A%A4+%EB%8F%99%EA%B6%81+%EC%BA%90%EC%8A%A4%ED%8C%85" },
+  { title: "박지훈, 영화 '왕과 사는 남자'로 백상예술대상 신인상 석권", time: "1 day ago", link: "https://search.naver.com/search.naver?where=news&query=%EB%B0%95%EC%A7%80%ED%9B%88+%EC%99%95%EA%B3%BC+%EC%82%AC%EB%8A%94+%EB%82%A8%EC%9E%90+%EB%B0%B1%EC%83%81" },
 ];
 
 const mockRecommendations = [
@@ -59,18 +59,18 @@ export default function Home() {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           {[
-            { label: "Entertainment News", value: "6", icon: Newspaper, color: "text-blue-400" },
-            { label: "Park Jihoon Updates", value: "2", icon: Star, color: "text-yellow-400" },
-            { label: "Upcoming Dramas", value: "1", icon: Play, color: "text-highlight" },
-            { label: "AI Recommendations", value: "4", icon: ArrowRight, color: "text-purple-400" },
+            { label: "Entertainment News", value: "6", icon: Newspaper, color: "text-blue-400", href: "/feed" },
+            { label: "Park Jihoon Updates", value: "2", icon: Star, color: "text-yellow-400", href: "/feed" },
+            { label: "Upcoming Dramas", value: "1", icon: Play, color: "text-highlight", href: "/dramas" },
+            { label: "AI Recommendations", value: "4", icon: ArrowRight, color: "text-purple-400", href: "/assistant" },
           ].map((stat, i) => (
-            <div key={i} className="bg-card/50 p-4 rounded-xl border border-white/5 flex items-start justify-between">
+            <Link key={i} href={stat.href} className="bg-card/50 p-4 rounded-xl border border-white/5 flex items-start justify-between hover:bg-card/80 hover:border-white/10 transition-colors group cursor-pointer">
               <div>
-                <p className="text-3xl font-bold text-white mb-1">{stat.value}</p>
-                <p className="text-sm text-secondary">{stat.label}</p>
+                <p className="text-3xl font-bold text-white mb-1 group-hover:text-accent transition-colors">{stat.value}</p>
+                <p className="text-sm text-secondary group-hover:text-gray-300 transition-colors">{stat.label}</p>
               </div>
               <stat.icon className={cn("w-5 h-5", stat.color)} />
-            </div>
+            </Link>
           ))}
         </div>
       </motion.section>
@@ -114,16 +114,24 @@ export default function Home() {
           <section className="glass-card p-5">
             <div className="flex items-center justify-between mb-4">
               <h3 className="text-lg font-semibold text-white">Latest Intelligence</h3>
-              <button className="text-secondary hover:text-white"><ArrowRight className="w-4 h-4" /></button>
+              <Link href="/feed" className="text-secondary hover:text-white transition-colors">
+                <ArrowRight className="w-4 h-4" />
+              </Link>
             </div>
             <div className="space-y-4">
               {mockNews.map((news, i) => (
-                <div key={i} className="group cursor-pointer">
+                <a 
+                  key={i} 
+                  href={news.link} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="group block cursor-pointer"
+                >
                   <p className="text-sm text-gray-300 group-hover:text-accent transition-colors line-clamp-2">
                     {news.title}
                   </p>
                   <p className="text-xs text-secondary mt-1">{news.time}</p>
-                </div>
+                </a>
               ))}
             </div>
           </section>
