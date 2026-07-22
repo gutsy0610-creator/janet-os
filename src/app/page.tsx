@@ -17,8 +17,27 @@ const mockNews = [
 ];
 
 const mockRecommendations = [
-  { title: "내일도 출근", match: "99% Match", genre: "Office / Romance", image: "/내일도출근.jpg" },
-  { title: "왕사남", match: "95% Match", genre: "Drama / Character-driven", image: "/images_왕사남.jfif" },
+  { 
+    title: "내일도 출근", 
+    match: "99% Match", 
+    genre: "Office / Romance", 
+    image: "/내일도출근.jpg",
+    link: "https://www.tving.com/contents/P001787810"
+  },
+  { 
+    title: "취사병 전설이 되다", 
+    match: "98% Match", 
+    genre: "Comedy / Military", 
+    image: "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=800&auto=format&fit=crop&q=60",
+    link: "https://www.tving.com/contents/P001785205"
+  },
+  { 
+    title: "왕사남", 
+    match: "95% Match", 
+    genre: "Drama / Character-driven", 
+    image: "/images_왕사남.jfif",
+    link: "https://search.tving.com/search/all?keyword=%EC%99%95%EC%82%AC%EB%82%A8"
+  },
 ];
 
 export default function Home() {
@@ -87,9 +106,12 @@ export default function Home() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {mockRecommendations.map((rec, i) => (
-                <div 
+                <a 
                   key={i}
-                  className="group relative h-56 rounded-2xl overflow-hidden cursor-pointer border border-white/10 shadow-2xl"
+                  href={rec.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group relative h-56 rounded-2xl overflow-hidden cursor-pointer border border-white/10 shadow-2xl block"
                 >
                   <motion.div 
                     animate={{ scale: [1, 1.05, 1], x: [0, -10, 0] }}
@@ -103,7 +125,7 @@ export default function Home() {
                     <h4 className="text-2xl font-bold text-white mb-1 drop-shadow-md">{rec.title}</h4>
                     <p className="text-sm text-gray-200 drop-shadow-md">{rec.genre}</p>
                   </div>
-                </div>
+                </a>
               ))}
             </div>
           </section>
