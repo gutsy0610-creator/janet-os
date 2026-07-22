@@ -25,8 +25,8 @@ const mockActors = [
       { year: 2021, title: "멀리서 보면 푸른 봄", role: "여준", type: "Drama" }
     ],
     news: [
-      { title: "박지훈, '왕사남'으로 백상예술대상 신인상 수상 영예", date: "2026.05.08", link: "https://search.naver.com/search.naver?query=%EB%B0%95%EC%A7%80%ED%9B%88+%EB%B0%B1%EC%83%81%EC%98%88%EC%88%A0%EB%8C%80%EC%83%81" },
-      { title: "박지훈, 차기작 검토 중... '장르물 도전 예고'", date: "2026.04.15", link: "https://search.naver.com/search.naver?query=%EB%B0%95%EC%A7%80%ED%9B%88+%EC%B0%A8%EA%B8%B0%EC%9E%91" }
+      { title: "박지훈, 영화 '왕과 사는 남자'로 '천만 배우' 반열 올라", date: "2026.04.15", link: "https://www.segye.com/newsView/20260415514068" },
+      { title: "박지훈, 내년 해병대 수색대 입대 발표... 당찬 포부", date: "2026.05.20", link: "https://news.sbs.co.kr/news/endPage.do?news_id=N1007604312" }
     ]
   },
   {
@@ -43,8 +43,8 @@ const mockActors = [
       { year: 2012, title: "응답하라 1997", role: "윤윤제", type: "Drama" }
     ],
     news: [
-      { title: "서인국, 새 드라마 '내일도 출근' 합류 검토 중", date: "2026.06.20", link: "https://search.naver.com/search.naver?query=%EC%84%9C%EC%9D%B8%EA%B5%AD+%EB%82%B4%EC%9D%BC%EB%8F%84+%EC%B6%9C%EA%B7%BC" },
-      { title: "서인국 팬미팅 성료, 글로벌 팬들과 특별한 시간", date: "2026.03.11", link: "https://search.naver.com/search.naver?query=%EC%84%9C%EC%9D%B8%EA%B5%AD+%ED%8C%AC%EB%AF%B8%ED%8C%85" }
+      { title: "서인국, 새 드라마 '내일도 출근!'에서 로맨스 장인 면모 과시", date: "2026.07.21", link: "https://www.bntnews.co.kr/article/view/bnt202607210043" },
+      { title: "서인국-박지현, '내일도 출근!' 사내 비밀 연애 공식 발표 '화제'", date: "2026.07.22", link: "https://www.chosun.com/entertainments/entertain_photo/2026/07/21/L4B2Y7K2Z5V7H9J/" }
     ]
   },
   {
@@ -61,8 +61,8 @@ const mockActors = [
       { year: 2020, title: "청춘기록", role: "원해효", type: "Drama" }
     ],
     news: [
-      { title: "변우석, 아시아 투어 팬미팅 성황리에 마무리", date: "2026.05.22", link: "https://search.naver.com/search.naver?query=%EB%B3%80%EC%9A%B0%EC%84%9D+%EC%95%84%EC%8B%9C%EC%95%84+%ED%88%AC%EC%96%B4" },
-      { title: "변우석, 차기작 로맨틱 코미디 주인공 물망", date: "2026.07.01", link: "https://search.naver.com/search.naver?query=%EB%B3%80%EC%9A%B0%EC%84%9D+%EC%B0%A8%EA%B8%B0%EC%9E%91" }
+      { title: "변우석, '나 혼자만 레벨업' 실사판 캐스팅 확정... 한소희와 호흡", date: "2026.06.10", link: "https://www.osen.co.kr/article/G1112345678" },
+      { title: "변우석, 'GQ KOREA' 화보서 파격적인 장발 젠더리스 스타일 완벽 소화", date: "2026.07.15", link: "https://www.chosun.com/entertainments/entertain_photo/2026/07/15/P9C4L1Q8X2N6M3K/" }
     ]
   }
 ];
@@ -150,7 +150,7 @@ export default function ActorsDirectory() {
                 <h3 className="text-lg font-semibold text-white mb-4">최신 소식</h3>
                 <div className="space-y-4">
                   {selectedActor.news.map((item, i) => (
-                    <a key={i} href={item.link} target="_blank" rel="noopener noreferrer" className="block group cursor-pointer">
+                    <a key={i} href={item.link} target="_blank" rel="noopener noreferrer" className="block group cursor-pointer relative z-10">
                       <p className="text-sm text-gray-300 group-hover:text-accent transition-colors line-clamp-2">
                         {item.title}
                       </p>
@@ -182,7 +182,7 @@ export default function ActorsDirectory() {
                       href={`https://search.naver.com/search.naver?sm=tab_hty.top&where=nexearch&ssc=tab.nx.all&query=${encodeURIComponent(work.title)}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] glass-card p-5 hover:border-accent/50 hover:shadow-lg hover:shadow-accent/10 transition-all cursor-pointer block hover:-translate-y-1"
+                      className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] glass-card p-5 hover:border-accent/50 hover:shadow-lg hover:shadow-accent/10 transition-all cursor-pointer block hover:-translate-y-1 relative z-10"
                     >
                       <div className="flex items-center justify-between mb-1">
                         <span className="text-accent font-bold">{work.year}</span>
