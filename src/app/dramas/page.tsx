@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Search, Filter, Play, Star, ChevronRight } from "lucide-react";
+import { Search, Filter, Play, Star, ChevronRight, ExternalLink } from "lucide-react";
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
 
@@ -10,11 +10,11 @@ function cn(...inputs: ClassValue[]) {
 }
 
 const mockDramas = [
-  { title: "Hospital Playlist", year: 2020, episodes: 12, genre: "Medical / Slice of Life", rating: 4.9, image: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&auto=format&fit=crop&q=60" },
-  { title: "Doctor Slump", year: 2024, episodes: 16, genre: "Medical / Rom-Com", rating: 4.8, image: "https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?w=800&auto=format&fit=crop&q=60" },
-  { title: "Moving", year: 2023, episodes: 20, genre: "Action / Sci-Fi", rating: 4.9, image: "https://images.unsplash.com/photo-1618365908648-e71bd5716cba?w=800&auto=format&fit=crop&q=60" },
-  { title: "D.P.", year: 2021, episodes: 6, genre: "Military / Drama", rating: 4.7, image: "https://images.unsplash.com/photo-1601628828688-632f38a5a7d0?w=800&auto=format&fit=crop&q=60" },
-  { title: "Weak Hero Class 1", year: 2022, episodes: 8, genre: "Action / Youth", rating: 4.8, image: "https://images.unsplash.com/photo-1555626906-fcf10d6851b4?w=800&auto=format&fit=crop&q=60" },
+  { title: "Hospital Playlist", year: 2020, episodes: 12, genre: "Medical / Slice of Life", rating: 4.9, image: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&auto=format&fit=crop&q=60", link: "https://www.tving.com/search?keyword=%EC%8A%AC%EA%B8%B0%EB%A1%9C%EC%9A%B4%20%EC%9D%98%EC%82%AC%EC%83%9D%ED%99%9C" },
+  { title: "Doctor Slump", year: 2024, episodes: 16, genre: "Medical / Rom-Com", rating: 4.8, image: "https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?w=800&auto=format&fit=crop&q=60", link: "https://www.tving.com/search?keyword=%EB%8B%A5%ED%84%B0%EC%8A%AC%EB%9F%BC%ED%94%84" },
+  { title: "Moving", year: 2023, episodes: 20, genre: "Action / Sci-Fi", rating: 4.9, image: "https://images.unsplash.com/photo-1618365908648-e71bd5716cba?w=800&auto=format&fit=crop&q=60", link: "https://www.tving.com/search?keyword=%EB%AC%B4%EB%B9%99" },
+  { title: "D.P.", year: 2021, episodes: 6, genre: "Military / Drama", rating: 4.7, image: "https://images.unsplash.com/photo-1601628828688-632f38a5a7d0?w=800&auto=format&fit=crop&q=60", link: "https://www.tving.com/search?keyword=D.P." },
+  { title: "Weak Hero Class 1", year: 2022, episodes: 8, genre: "Action / Youth", rating: 4.8, image: "https://images.unsplash.com/photo-1555626906-fcf10d6851b4?w=800&auto=format&fit=crop&q=60", link: "https://www.tving.com/search?keyword=%EC%95%BD%ED%95%9C%EC%98%81%EC%9B%85" },
 ];
 
 export default function DramaLibrary() {
@@ -52,18 +52,21 @@ export default function DramaLibrary() {
             transition={{ delay: i * 0.1 }}
             className="group relative cursor-pointer"
           >
-            <div className="relative h-64 rounded-2xl overflow-hidden mb-3 border border-white/10">
+            <a href={drama.link} target="_blank" rel="noopener noreferrer" className="block relative h-64 rounded-2xl overflow-hidden mb-3 border border-white/10">
               <div 
                 className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
                 style={{ backgroundImage: `url(${drama.image})` }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div className="w-12 h-12 rounded-full bg-accent text-background flex items-center justify-center pl-1 shadow-lg shadow-accent/20">
+              <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="w-12 h-12 rounded-full bg-accent text-background flex items-center justify-center pl-1 shadow-lg shadow-accent/20 mb-2">
                   <Play className="w-5 h-5" />
                 </div>
+                <div className="flex items-center gap-1 text-white bg-black/50 px-3 py-1 rounded-full text-xs font-medium backdrop-blur-md">
+                  Watch on TVING <ExternalLink className="w-3 h-3" />
+                </div>
               </div>
-            </div>
+            </a>
             
             <div className="px-1">
               <div className="flex items-center justify-between mb-1">
