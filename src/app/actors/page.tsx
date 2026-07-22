@@ -20,9 +20,11 @@ const mockActors = [
     bio: "아역 배우 출신으로 '프로듀스 101 시즌 2'를 통해 워너원으로 데뷔하며 큰 사랑을 받았습니다. 이후 '약한영웅 Class 1', '환상연가' 등에서 탄탄한 연기력을 인정받았으며, 영화 '왕과 사는 남자'를 통해 2026년 백상예술대상 신인상을 거머쥐며 대세 배우로 자리매김했습니다.",
     works: [
       { year: 2026, title: "왕과 사는 남자", role: "단종", type: "Movie" },
+      { year: 2024, title: "오드리", role: "강기훈", type: "Movie" },
       { year: 2024, title: "환상연가", role: "사조 현 / 악희", type: "Drama" },
       { year: 2022, title: "약한영웅 Class 1", role: "연시은", type: "Drama" },
-      { year: 2021, title: "멀리서 보면 푸른 봄", role: "여준", type: "Drama" }
+      { year: 2021, title: "멀리서 보면 푸른 봄", role: "여준", type: "Drama" },
+      { year: 2020, title: "연애혁명", role: "공주영", type: "Drama" }
     ],
     news: [
       { title: "박지훈, 영화 '왕과 사는 남자'로 '천만 배우' 반열 올라", date: "2026.04.15", link: "https://www.segye.com/newsView/20260415514068" },
