@@ -12,14 +12,14 @@ function cn(...inputs: ClassValue[]) {
 const mockFeed = [
   {
     id: 1,
-    category: "Park Jihoon",
-    categoryColor: "text-yellow-400 bg-yellow-400/10 border-yellow-400/20",
-    icon: Star,
-    title: "[단독] 박지훈, 티빙 '취사병 전설이 되다' 시청률 1위 견인... 코믹 연기도 통했다",
+    category: "Drama News",
+    categoryColor: "text-accent bg-accent/10 border-accent/20",
+    icon: Newspaper,
+    title: "[단독] 리얼 오피스 로맨스 '내일도 출근', 하반기 방영 확정... 직장인 공감 100% 예고",
     source: "Naver Entertainment",
     time: "2 hours ago",
-    aiSummary: "박지훈 주연의 티빙 오리지널 시리즈 '취사병 전설이 되다'가 방영 직후 동시간대 시청률 1위를 기록했습니다. 전작 '왕과 사는 남자'의 진중한 모습과는 180도 다른 '병맛' 코믹 연기를 완벽하게 소화하며 천만 배우의 넓은 연기 스펙트럼을 증명했다는 평을 받고 있습니다.",
-    link: "https://search.naver.com/search.naver?where=news&query=%EB%B0%95%EC%A7%80%ED%9B%88+%EC%B7%A8%EC%82%AC%EB%B3%91+%EC%A0%84%EC%84%A4%EC%9D%B4+%EB%90%98%EB%8B%A4",
+    aiSummary: "인기 웹툰을 원작으로 한 드라마 '내일도 출근'이 올해 하반기 방영을 확정지었습니다. 현실적인 직장 생활과 사내 연애를 섬세하게 그려내어 수많은 2030 직장인들의 공감을 이끌어낼 것으로 큰 기대를 모으고 있습니다.",
+    link: "https://search.naver.com/search.naver?where=news&query=%EB%82%B4%EC%9D%BC%EB%8F%84+%EC%B6%9C%EA%B7%BC+%EB%93%9C%EB%9D%BC%EB%A7%88",
     image: "/내일도출근.jpg"
   },
   {
