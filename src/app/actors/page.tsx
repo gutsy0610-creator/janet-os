@@ -10,7 +10,20 @@ function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-const mockActors = [
+// 네이버 인물 정보 프로필과 동일한 구조의 데이터 타입 정립
+export interface Actor {
+  id: string;
+  name: string;
+  nameEn: string;
+  gender: "male" | "female";
+  image: string; // 네이버 인물검색 프로필 이미지 URL을 등록할 수 있는 필드 (3:4 비율 권장)
+  followers: string;
+  bio: string;
+  works: { year: number; title: string; role: string; type: "Movie" | "Drama" }[];
+  news: { title: string; date: string; link: string }[];
+}
+
+const mockActors: Actor[] = [
   {
     id: "park-jihoon",
     name: "박지훈",
@@ -354,7 +367,8 @@ export default function ActorsDirectory() {
                 : "bg-card/50 border-white/10 text-secondary hover:bg-card hover:text-white"
             )}
           >
-            <div className="w-8 h-8 rounded-full overflow-hidden bg-background shrink-0">
+            {/* 네이버 프로필 썸네일 스타일 (3:4 비율, 둥근 모서리 사각형) */}
+            <div className="w-9 h-12 rounded-md overflow-hidden bg-background shrink-0 border border-white/5 shadow-sm">
               <img src={actor.image} alt={actor.name} className="w-full h-full object-cover" />
             </div>
             <span className="font-bold text-sm tracking-wide">{actor.name}</span>
@@ -373,8 +387,8 @@ export default function ActorsDirectory() {
         >
           {/* Profile Header */}
           <div className="flex flex-col md:flex-row gap-8 mt-8 mb-12">
-            {/* Large Portrait Image */}
-            <div className="w-48 md:w-64 shrink-0 rounded-3xl overflow-hidden shadow-2xl border border-white/10 aspect-[3/4]">
+            {/* Large Portrait Image - 네이버 스타일 둥근 사각형 적용 */}
+            <div className="w-48 md:w-64 shrink-0 rounded-2xl overflow-hidden shadow-2xl border border-white/10 aspect-[3/4]">
               <img src={selectedActor.image} alt={selectedActor.name} className="w-full h-full object-cover" />
             </div>
             
