@@ -33,8 +33,6 @@ const navItems = [
   { name: "배우", href: "/actors", icon: Users },
   { name: "영화", href: "/movies", icon: Video },
   { name: "인기 숏츠", href: "/shorts", icon: Smartphone },
-  { name: "방영 캘린더", href: "/calendar", icon: Calendar },
-  { name: "북마크", href: "/bookmarks", icon: Bookmark },
   { name: "AI 비서", href: "/assistant", icon: MessageSquare },
   { name: "설정", href: "/settings", icon: Settings },
 ];
