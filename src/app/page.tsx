@@ -28,7 +28,7 @@ const mockRecommendations = [
     title: "취사병 전설이 되다", 
     match: "98% Match", 
     genre: "Comedy / Military", 
-    image: "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=800&auto=format&fit=crop&q=60",
+    image: "/P001785205_취사병.webp",
     link: "https://www.tving.com/contents/P001785205"
   },
   { 
