@@ -17,8 +17,8 @@ const mockNews = [
 ];
 
 const mockRecommendations = [
-  { title: "Doctor Slump", match: "98% Match", genre: "Medical / Rom-Com", image: "https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?w=800&auto=format&fit=crop&q=60" },
-  { title: "Moving", match: "95% Match", genre: "Action / Sci-Fi", image: "https://images.unsplash.com/photo-1618365908648-e71bd5716cba?w=800&auto=format&fit=crop&q=60" },
+  { title: "내일도 출근", match: "99% Match", genre: "Office / Romance", image: "/내일도출근.jpg" },
+  { title: "왕사남", match: "95% Match", genre: "Drama / Character-driven", image: "/images_왕사남.jfif" },
 ];
 
 export default function Home() {
@@ -87,22 +87,23 @@ export default function Home() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {mockRecommendations.map((rec, i) => (
-                <motion.div 
+                <div 
                   key={i}
-                  whileHover={{ y: -5 }}
-                  className="group relative h-48 rounded-2xl overflow-hidden cursor-pointer border border-white/10"
+                  className="group relative h-56 rounded-2xl overflow-hidden cursor-pointer border border-white/10 shadow-2xl"
                 >
-                  <div 
-                    className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
-                    style={{ backgroundImage: `url(${rec.image})` }}
+                  <motion.div 
+                    animate={{ scale: [1, 1.05, 1], x: [0, -10, 0] }}
+                    transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                    className="absolute inset-0 bg-cover bg-center"
+                    style={{ backgroundImage: `url('${encodeURI(rec.image)}')` }}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
-                  <div className="absolute inset-0 p-5 flex flex-col justify-end">
-                    <span className="text-highlight text-xs font-bold mb-1 tracking-wider">{rec.match}</span>
-                    <h4 className="text-xl font-bold text-white mb-1">{rec.title}</h4>
-                    <p className="text-sm text-gray-300">{rec.genre}</p>
+                  <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent transition-opacity duration-500 group-hover:opacity-80" />
+                  <div className="absolute inset-0 p-5 flex flex-col justify-end transform transition-transform duration-500 group-hover:-translate-y-2">
+                    <span className="text-highlight text-xs font-bold mb-1 tracking-wider backdrop-blur-md bg-black/20 w-max px-2 py-1 rounded">{rec.match}</span>
+                    <h4 className="text-2xl font-bold text-white mb-1 drop-shadow-md">{rec.title}</h4>
+                    <p className="text-sm text-gray-200 drop-shadow-md">{rec.genre}</p>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
           </section>
