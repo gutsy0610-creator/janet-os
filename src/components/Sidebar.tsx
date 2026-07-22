@@ -16,7 +16,8 @@ import {
   MessageSquare,
   Settings,
   Menu,
-  X
+  X,
+  Smartphone
 } from "lucide-react";
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
@@ -31,7 +32,7 @@ const navItems = [
   { name: "드라마 라이브러리", href: "/dramas", icon: Film },
   { name: "배우", href: "/actors", icon: Users },
   { name: "영화", href: "/movies", icon: Video },
-  { name: "해외 시리즈", href: "/international", icon: Globe },
+  { name: "인기 숏츠", href: "/shorts", icon: Smartphone },
   { name: "방영 캘린더", href: "/calendar", icon: Calendar },
   { name: "북마크", href: "/bookmarks", icon: Bookmark },
   { name: "AI 비서", href: "/assistant", icon: MessageSquare },
