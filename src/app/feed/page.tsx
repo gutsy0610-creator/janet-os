@@ -15,36 +15,36 @@ const mockFeed = [
     category: "Park Jihoon",
     categoryColor: "text-yellow-400 bg-yellow-400/10 border-yellow-400/20",
     icon: Star,
-    title: "Park Jihoon confirmed for new historical drama lead role",
-    source: "Soompi",
+    title: "[단독] 박지훈, 티빙 '취사병 전설이 되다' 시청률 1위 견인... 코믹 연기도 통했다",
+    source: "Naver Entertainment",
     time: "2 hours ago",
-    aiSummary: "Actor Park Jihoon has officially accepted the lead role in an upcoming KBS historical drama. The series, set in the Joseon dynasty, will showcase a darker, more serious side of his acting spectrum.",
-    link: "#",
-    image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=800&auto=format&fit=crop&q=60"
+    aiSummary: "박지훈 주연의 티빙 오리지널 시리즈 '취사병 전설이 되다'가 방영 직후 동시간대 시청률 1위를 기록했습니다. 전작 '왕과 사는 남자'의 진중한 모습과는 180도 다른 '병맛' 코믹 연기를 완벽하게 소화하며 천만 배우의 넓은 연기 스펙트럼을 증명했다는 평을 받고 있습니다.",
+    link: "https://search.naver.com/search.naver?where=news&query=%EB%B0%95%EC%A7%80%ED%9B%88+%EC%B7%A8%EC%82%AC%EB%B3%91+%EC%A0%84%EC%84%A4%EC%9D%B4+%EB%90%98%EB%8B%A4",
+    image: "/내일도출근.jpg"
   },
   {
     id: 2,
     category: "Drama News",
     categoryColor: "text-accent bg-accent/10 border-accent/20",
     icon: Newspaper,
-    title: "Hospital Playlist Season 3 in early discussions?",
-    source: "Naver Entertainment",
+    title: "하반기 최고 기대작 넷플릭스 '동궁', 남주혁·노윤서·조승우 라인업 완성",
+    source: "Cine21",
     time: "5 hours ago",
-    aiSummary: "Industry insiders report that director Shin Won-ho and writer Lee Woo-jung have recently held meetings to discuss a potential third season of the beloved medical drama. Fans are eagerly awaiting official confirmation.",
-    link: "#",
-    image: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&auto=format&fit=crop&q=60"
+    aiSummary: "넷플릭스의 새로운 오컬트 사극 '동궁'이 남주혁, 노윤서, 조승우라는 탄탄한 캐스팅 라인업을 완성하며 2026년 하반기 최고 화제작으로 떠올랐습니다. 역사적 배경에 다크 판타지가 결합된 새로운 장르를 선보일 예정입니다.",
+    link: "https://search.naver.com/search.naver?where=news&query=%EB%84%B7%ED%94%8C%EB%A6%AD%EC%8A%A4+%EB%8F%99%EA%B6%81+%EC%BA%90%EC%8A%A4%ED%8C%85",
+    image: "https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=800&auto=format&fit=crop&q=60"
   },
   {
     id: 3,
     category: "Park Jihoon",
     categoryColor: "text-yellow-400 bg-yellow-400/10 border-yellow-400/20",
     icon: Star,
-    title: "Behind the scenes: Park Jihoon's intense action training",
+    title: "박지훈, 영화 '왕과 사는 남자'로 백상예술대상 신인상 석권... 트리플 크라운 달성",
     source: "Dispatch",
     time: "1 day ago",
-    aiSummary: "A new vlog released by Maroo Entertainment reveals Park Jihoon attending action school for three months to prepare for his intense fight scenes in 'Weak Hero Class 1', performing 90% of his own stunts.",
-    link: "#",
-    image: "https://images.unsplash.com/photo-1620121692029-d088224ddc74?w=800&auto=format&fit=crop&q=60"
+    aiSummary: "1,689만 명의 관객을 동원한 영화 '왕과 사는 남자'에서 단종 역을 열연한 박지훈이 제62회 백상예술대상에서 남자 신인 연기상을 수상했습니다. 이로써 음악, 드라마, 영화 3개 분야에서 모두 신인상을 휩쓰는 진기록을 세웠습니다.",
+    link: "https://search.naver.com/search.naver?where=news&query=%EB%B0%95%EC%A7%80%ED%9B%88+%EC%99%95%EA%B3%BC+%EC%82%AC%EB%8A%94+%EB%82%A8%EC%9E%90+%EB%B0%B1%EC%83%81",
+    image: "/images_왕사남.jfif"
   }
 ];
 
@@ -110,7 +110,9 @@ export default function MyFeed() {
                 <div className="flex items-center justify-between mt-2">
                   <span className="text-xs text-secondary font-medium">Source: {item.source}</span>
                   <a 
-                    href={item.link} 
+                    href={item.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="flex items-center gap-1.5 text-sm text-accent hover:text-white transition-colors"
                   >
                     Read Original <ExternalLink className="w-4 h-4" />
