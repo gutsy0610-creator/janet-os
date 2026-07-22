@@ -103,27 +103,28 @@ export default function ActorsDirectory() {
           className="space-y-12"
         >
           {/* Profile Header */}
-          <div className="relative h-64 rounded-3xl overflow-hidden mt-8 mb-16 bg-card">
-            <div className="absolute inset-0 bg-gradient-to-r from-card to-card/50" />
-            
-            <div className="absolute -bottom-16 left-8 flex items-end gap-6">
-              <div className="w-40 h-40 rounded-full border-4 border-background overflow-hidden bg-card shadow-2xl">
-                <img src={selectedActor.image} alt={selectedActor.name} className="w-full h-full object-cover" />
-              </div>
-              <div className="mb-4">
-                <h2 className="text-4xl font-bold text-white mb-2">{selectedActor.name}</h2>
-                <p className="text-xl text-gray-400 font-medium">{selectedActor.nameEn}</p>
-              </div>
+          <div className="flex flex-col md:flex-row gap-8 mt-8 mb-12">
+            {/* Large Portrait Image */}
+            <div className="w-48 md:w-64 shrink-0 rounded-3xl overflow-hidden shadow-2xl border border-white/10 aspect-[3/4]">
+              <img src={selectedActor.image} alt={selectedActor.name} className="w-full h-full object-cover" />
             </div>
             
-            <div className="absolute bottom-6 right-8 flex gap-3">
-              <button className="p-3 bg-card/80 backdrop-blur-md border border-white/10 rounded-full hover:bg-accent/20 hover:text-accent transition-colors text-white">
-                <Share2 className="w-5 h-5" />
-              </button>
-              <button className="px-6 py-3 bg-accent text-background font-bold rounded-full hover:bg-accent/90 transition-colors flex items-center gap-2">
-                <Heart className="w-5 h-5 fill-current" />
-                팔로우
-              </button>
+            {/* Info & Actions */}
+            <div className="flex-1 flex flex-col justify-end md:pb-4">
+              <div className="mb-6">
+                <h2 className="text-5xl md:text-6xl font-bold text-white mb-2 tracking-tight">{selectedActor.name}</h2>
+                <p className="text-2xl text-gray-400 font-medium">{selectedActor.nameEn}</p>
+              </div>
+              
+              <div className="flex gap-4">
+                <button className="px-8 py-3.5 bg-accent text-background font-bold rounded-2xl hover:bg-accent/90 transition-colors flex items-center gap-2 text-lg shadow-lg shadow-accent/20">
+                  <Heart className="w-5 h-5 fill-current" />
+                  팔로우
+                </button>
+                <button className="px-4 py-3.5 bg-card border border-white/10 rounded-2xl hover:bg-white/5 transition-colors text-white shadow-lg">
+                  <Share2 className="w-5 h-5" />
+                </button>
+              </div>
             </div>
           </div>
 
