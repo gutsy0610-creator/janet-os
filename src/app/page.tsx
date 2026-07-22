@@ -50,7 +50,7 @@ export default function Home() {
           animate={{ opacity: 1, y: 0 }}
           className="text-4xl font-bold text-white tracking-tight"
         >
-          Good Evening, <span className="text-accent">Janet.</span>
+          안녕하세요, <span className="text-accent">Janet.</span>
         </motion.h2>
         <motion.p 
           initial={{ opacity: 0, y: 10 }}
@@ -58,7 +58,7 @@ export default function Home() {
           transition={{ delay: 0.1 }}
           className="text-secondary text-lg"
         >
-          Your personal drama intelligence is ready.
+          나만의 맞춤형 드라마 AI 비서가 준비되었습니다.
         </motion.p>
       </header>
 
@@ -70,18 +70,18 @@ export default function Home() {
         className="glass-card p-6"
       >
         <div className="flex items-center justify-between mb-6">
-          <h3 className="text-xl font-semibold text-white">Today's Brief</h3>
+          <h3 className="text-xl font-semibold text-white">오늘의 요약</h3>
           <span className="text-xs font-medium px-2.5 py-1 bg-accent/10 text-accent rounded-full border border-accent/20">
-            AI Generated
+            AI 분석 완료
           </span>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           {[
-            { label: "Entertainment News", value: "6", icon: Newspaper, color: "text-blue-400", href: "/feed" },
-            { label: "Park Jihoon Updates", value: "2", icon: Star, color: "text-yellow-400", href: "/feed" },
-            { label: "Upcoming Dramas", value: "1", icon: Play, color: "text-highlight", href: "/dramas" },
-            { label: "AI Recommendations", value: "4", icon: ArrowRight, color: "text-purple-400", href: "/assistant" },
+            { label: "연예 뉴스", value: "6", icon: Newspaper, color: "text-blue-400", href: "/feed" },
+            { label: "박지훈 소식", value: "2", icon: Star, color: "text-yellow-400", href: "/feed" },
+            { label: "방영 예정 드라마", value: "1", icon: Play, color: "text-highlight", href: "/dramas" },
+            { label: "AI 맞춤 추천", value: "4", icon: ArrowRight, color: "text-purple-400", href: "/assistant" },
           ].map((stat, i) => (
             <Link key={i} href={stat.href} className="bg-card/50 p-4 rounded-xl border border-white/5 flex items-start justify-between hover:bg-card/80 hover:border-white/10 transition-colors group cursor-pointer">
               <div>
@@ -99,9 +99,9 @@ export default function Home() {
         <div className="lg:col-span-2 space-y-8">
           <section>
             <div className="flex items-center justify-between mb-4">
-              <h3 className="text-lg font-semibold text-white">Recommended for You</h3>
+              <h3 className="text-lg font-semibold text-white">맞춤 추천</h3>
               <Link href="/dramas" className="text-sm text-accent hover:text-white transition-colors flex items-center gap-1">
-                View all <ChevronRight className="w-4 h-4" />
+                전체 보기 <ChevronRight className="w-4 h-4" />
               </Link>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -135,7 +135,7 @@ export default function Home() {
         <div className="space-y-8">
           <section className="glass-card p-5">
             <div className="flex items-center justify-between mb-4">
-              <h3 className="text-lg font-semibold text-white">Latest Intelligence</h3>
+              <h3 className="text-lg font-semibold text-white">최신 소식</h3>
               <Link href="/feed" className="text-secondary hover:text-white transition-colors">
                 <ArrowRight className="w-4 h-4" />
               </Link>

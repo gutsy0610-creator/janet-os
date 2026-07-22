@@ -53,10 +53,10 @@ export default function MyFeed() {
     <div className="p-8 max-w-4xl mx-auto w-full space-y-8 pb-24">
       {/* Header */}
       <header className="mb-10">
-        <h2 className="text-3xl font-bold text-white tracking-tight mb-2">My Feed</h2>
+        <h2 className="text-3xl font-bold text-white tracking-tight mb-2">내 피드</h2>
         <p className="text-secondary flex items-center gap-2">
           <Sparkles className="w-4 h-4 text-accent" />
-          Curated intelligence based on your taste.
+          취향에 맞춘 맞춤형 추천 소식입니다.
         </p>
       </header>
 
@@ -101,21 +101,21 @@ export default function MyFeed() {
                   <div className="bg-background/50 border border-white/5 rounded-xl p-4 mb-4 relative">
                     <Sparkles className="w-4 h-4 text-highlight absolute -top-2 -left-2 bg-background rounded-full" />
                     <p className="text-sm text-gray-300 leading-relaxed">
-                      <span className="font-semibold text-highlight mr-2">AI Summary</span>
+                      <span className="font-semibold text-highlight mr-2">AI 요약</span>
                       {item.aiSummary}
                     </p>
                   </div>
                 </div>
 
                 <div className="flex items-center justify-between mt-2">
-                  <span className="text-xs text-secondary font-medium">Source: {item.source}</span>
+                  <span className="text-xs text-secondary font-medium">출처: {item.source}</span>
                   <a 
                     href={item.link}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-1.5 text-sm text-accent hover:text-white transition-colors"
                   >
-                    Read Original <ExternalLink className="w-4 h-4" />
+                    원문 읽기 <ExternalLink className="w-4 h-4" />
                   </a>
                 </div>
               </div>

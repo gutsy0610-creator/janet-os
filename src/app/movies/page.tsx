@@ -23,8 +23,8 @@ export default function MoviesLibrary() {
       {/* Header */}
       <header className="flex flex-col md:flex-row md:items-end justify-between gap-6">
         <div>
-          <h2 className="text-3xl font-bold text-white tracking-tight mb-2">Now Showing</h2>
-          <p className="text-secondary">Explore the latest blockbusters in theaters.</p>
+          <h2 className="text-3xl font-bold text-white tracking-tight mb-2">현재 상영작</h2>
+          <p className="text-secondary">극장 상영 중인 최신 인기 영화를 탐색해 보세요.</p>
         </div>
         
         <div className="flex gap-4">
@@ -64,7 +64,7 @@ export default function MoviesLibrary() {
                   <Play className="w-5 h-5" />
                 </div>
                 <div className="flex items-center gap-1 text-white bg-black/50 px-3 py-1 rounded-full text-xs font-medium backdrop-blur-md">
-                  Search on Naver <ExternalLink className="w-3 h-3" />
+                  네이버 검색 <ExternalLink className="w-3 h-3" />
                 </div>
               </div>
             </a>

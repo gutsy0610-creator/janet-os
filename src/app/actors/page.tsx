@@ -123,7 +123,7 @@ export default function ActorsDirectory() {
               </button>
               <button className="px-6 py-3 bg-accent text-background font-bold rounded-full hover:bg-accent/90 transition-colors flex items-center gap-2">
                 <Heart className="w-5 h-5 fill-current" />
-                Follow
+                팔로우
               </button>
             </div>
           </div>
@@ -132,22 +132,22 @@ export default function ActorsDirectory() {
             {/* Left Column */}
             <div className="space-y-8">
               <section className="glass-card p-6">
-                <h3 className="text-lg font-semibold text-white mb-4">About</h3>
+                <h3 className="text-lg font-semibold text-white mb-4">소개</h3>
                 <p className="text-secondary leading-relaxed mb-6">{selectedActor.bio}</p>
                 <div className="grid grid-cols-2 gap-4">
                   <div className="bg-background/50 p-4 rounded-xl border border-white/5">
-                    <p className="text-sm text-secondary mb-1">Followers</p>
+                    <p className="text-sm text-secondary mb-1">팔로워</p>
                     <p className="text-xl font-bold text-white">{selectedActor.followers}</p>
                   </div>
                   <div className="bg-background/50 p-4 rounded-xl border border-white/5">
-                    <p className="text-sm text-secondary mb-1">Works</p>
+                    <p className="text-sm text-secondary mb-1">참여 작품</p>
                     <p className="text-xl font-bold text-white">{selectedActor.works.length}</p>
                   </div>
                 </div>
               </section>
 
               <section className="glass-card p-6">
-                <h3 className="text-lg font-semibold text-white mb-4">Latest Intelligence</h3>
+                <h3 className="text-lg font-semibold text-white mb-4">최신 소식</h3>
                 <div className="space-y-4">
                   {selectedActor.news.map((item, i) => (
                     <div key={i} className="group cursor-pointer">
@@ -163,7 +163,7 @@ export default function ActorsDirectory() {
 
             {/* Right Column: AI Timeline */}
             <div className="lg:col-span-2 space-y-6">
-              <h3 className="text-2xl font-bold text-white mb-6">Career Timeline</h3>
+              <h3 className="text-2xl font-bold text-white mb-6">작품 활동 타임라인</h3>
               
               <div className="space-y-6 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-white/10 before:to-transparent">
                 {selectedActor.works.map((work, i) => (
@@ -184,7 +184,7 @@ export default function ActorsDirectory() {
                         <span className="text-xs px-2 py-1 bg-white/5 rounded text-secondary">{work.type}</span>
                       </div>
                       <h4 className="text-lg font-bold text-white mb-1">{work.title}</h4>
-                      <p className="text-sm text-gray-400">Role: {work.role}</p>
+                      <p className="text-sm text-gray-400">배역: {work.role}</p>
                     </div>
                   </motion.div>
                 ))}

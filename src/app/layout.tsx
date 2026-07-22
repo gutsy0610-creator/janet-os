@@ -16,7 +16,7 @@ export default function RootLayout({
     <html lang="en" className="dark h-full antialiased">
       <body className="min-h-full flex flex-col bg-background text-foreground">
         <Sidebar />
-        <main className="flex-1 md:pl-64">
+        <main className="flex-1 pt-16 md:pt-0 md:pl-64">
           {children}
         </main>
       </body>
