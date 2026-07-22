@@ -25,8 +25,8 @@ const mockActors = [
       { year: 2021, title: "멀리서 보면 푸른 봄", role: "여준", type: "Drama" }
     ],
     news: [
-      { title: "박지훈, '왕사남'으로 백상예술대상 신인상 수상 영예", date: "2026.05.08" },
-      { title: "박지훈, 차기작 검토 중... '장르물 도전 예고'", date: "2026.04.15" }
+      { title: "박지훈, '왕사남'으로 백상예술대상 신인상 수상 영예", date: "2026.05.08", link: "https://search.naver.com/search.naver?query=%EB%B0%95%EC%A7%80%ED%9B%88+%EB%B0%B1%EC%83%81%EC%98%88%EC%88%A0%EB%8C%80%EC%83%81" },
+      { title: "박지훈, 차기작 검토 중... '장르물 도전 예고'", date: "2026.04.15", link: "https://search.naver.com/search.naver?query=%EB%B0%95%EC%A7%80%ED%9B%88+%EC%B0%A8%EA%B8%B0%EC%9E%91" }
     ]
   },
   {
@@ -43,8 +43,8 @@ const mockActors = [
       { year: 2012, title: "응답하라 1997", role: "윤윤제", type: "Drama" }
     ],
     news: [
-      { title: "서인국, 새 드라마 '내일도 출근' 합류 검토 중", date: "2026.06.20" },
-      { title: "서인국 팬미팅 성료, 글로벌 팬들과 특별한 시간", date: "2026.03.11" }
+      { title: "서인국, 새 드라마 '내일도 출근' 합류 검토 중", date: "2026.06.20", link: "https://search.naver.com/search.naver?query=%EC%84%9C%EC%9D%B8%EA%B5%AD+%EB%82%B4%EC%9D%BC%EB%8F%84+%EC%B6%9C%EA%B7%BC" },
+      { title: "서인국 팬미팅 성료, 글로벌 팬들과 특별한 시간", date: "2026.03.11", link: "https://search.naver.com/search.naver?query=%EC%84%9C%EC%9D%B8%EA%B5%AD+%ED%8C%AC%EB%AF%B8%ED%8C%85" }
     ]
   },
   {
@@ -61,8 +61,8 @@ const mockActors = [
       { year: 2020, title: "청춘기록", role: "원해효", type: "Drama" }
     ],
     news: [
-      { title: "변우석, 아시아 투어 팬미팅 성황리에 마무리", date: "2026.05.22" },
-      { title: "변우석, 차기작 로맨틱 코미디 주인공 물망", date: "2026.07.01" }
+      { title: "변우석, 아시아 투어 팬미팅 성황리에 마무리", date: "2026.05.22", link: "https://search.naver.com/search.naver?query=%EB%B3%80%EC%9A%B0%EC%84%9D+%EC%95%84%EC%8B%9C%EC%95%84+%ED%88%AC%EC%96%B4" },
+      { title: "변우석, 차기작 로맨틱 코미디 주인공 물망", date: "2026.07.01", link: "https://search.naver.com/search.naver?query=%EB%B3%80%EC%9A%B0%EC%84%9D+%EC%B0%A8%EA%B8%B0%EC%9E%91" }
     ]
   }
 ];
@@ -150,12 +150,12 @@ export default function ActorsDirectory() {
                 <h3 className="text-lg font-semibold text-white mb-4">최신 소식</h3>
                 <div className="space-y-4">
                   {selectedActor.news.map((item, i) => (
-                    <div key={i} className="group cursor-pointer">
+                    <a key={i} href={item.link} target="_blank" rel="noopener noreferrer" className="block group cursor-pointer">
                       <p className="text-sm text-gray-300 group-hover:text-accent transition-colors line-clamp-2">
                         {item.title}
                       </p>
                       <p className="text-xs text-secondary mt-1">{item.date}</p>
-                    </div>
+                    </a>
                   ))}
                 </div>
               </section>
