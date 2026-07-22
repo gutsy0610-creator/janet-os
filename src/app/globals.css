@@ -1,0 +1,40 @@
+@import "tailwindcss";
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+@theme {
+  --color-background: #0F172A;
+  --color-foreground: #ffffff;
+  --color-card: #1E293B;
+  --color-card-hover: #233147;
+  --color-accent: #38BDF8;
+  --color-secondary: #64748B;
+  --color-highlight: #10B981;
+  --font-sans: "Pretendard", "Inter", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Glassmorphism utility */
+@layer utilities {
+  .glass {
+    @apply bg-card/60 backdrop-blur-xl border border-white/5;
+  }
+  
+  .glass-card {
+    @apply bg-card/40 backdrop-blur-md border border-white/10 rounded-2xl transition-all duration-300;
+  }
+}
