@@ -178,14 +178,19 @@ export default function ActorsDirectory() {
                       {work.type === "Drama" ? <Tv className="w-4 h-4" /> : <Film className="w-4 h-4" />}
                     </div>
                     
-                    <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] glass-card p-5 hover:border-accent/30 transition-colors">
+                    <a 
+                      href={`https://search.naver.com/search.naver?sm=tab_hty.top&where=nexearch&ssc=tab.nx.all&query=${encodeURIComponent(work.title)}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] glass-card p-5 hover:border-accent/50 hover:shadow-lg hover:shadow-accent/10 transition-all cursor-pointer block hover:-translate-y-1"
+                    >
                       <div className="flex items-center justify-between mb-1">
                         <span className="text-accent font-bold">{work.year}</span>
                         <span className="text-xs px-2 py-1 bg-white/5 rounded text-secondary">{work.type}</span>
                       </div>
-                      <h4 className="text-lg font-bold text-white mb-1">{work.title}</h4>
+                      <h4 className="text-lg font-bold text-white mb-1 hover:text-accent transition-colors">{work.title}</h4>
                       <p className="text-sm text-gray-400">배역: {work.role}</p>
-                    </div>
+                    </a>
                   </motion.div>
                 ))}
               </div>
