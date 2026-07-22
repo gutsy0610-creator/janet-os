@@ -104,6 +104,198 @@ const mockActors = [
     news: [
       { title: "아이유, 새 앨범 발매와 동시에 연기 활동 박차", date: "2026.07.10", link: "#" }
     ]
+  },
+  {
+    id: "ahn-hyoseop",
+    name: "안효섭",
+    nameEn: "Ahn Hyo-seop",
+    gender: "male",
+    image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=800&auto=format&fit=crop&q=60",
+    followers: "8.5M",
+    bio: "훈훈한 비주얼과 몰입감 있는 연기력으로 사랑받는 대세 배우입니다. '사내맞선', '낭만닥터 김사부' 등에서 다채로운 캐릭터를 소화하며 톱스타 반열에 올랐습니다.",
+    works: [
+      { year: 2023, title: "너의 시간 속으로", role: "구연준 / 남시헌", type: "Drama" },
+      { year: 2022, title: "사내맞선", role: "강태무", type: "Drama" }
+    ],
+    news: [
+      { title: "안효섭, 차기작 촬영 돌입... 팬들과의 만남 기대", date: "2026.07.20", link: "#" }
+    ]
+  },
+  {
+    id: "park-bogum",
+    name: "박보검",
+    nameEn: "Park Bo-gum",
+    gender: "male",
+    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=800&auto=format&fit=crop&q=60",
+    followers: "12.3M",
+    bio: "따뜻한 미소와 탄탄한 연기력으로 남녀노소 모두에게 사랑받는 국민 배우입니다. '응답하라 1988', '구르미 그린 달빛' 등으로 큰 인기를 끌었습니다.",
+    works: [
+      { year: 2024, title: "폭싹 속았수다", role: "관식", type: "Drama" },
+      { year: 2020, title: "청춘기록", role: "사혜준", type: "Drama" }
+    ],
+    news: [
+      { title: "박보검, 뮤지컬 데뷔작 전석 매진 신화", date: "2026.06.15", link: "#" }
+    ]
+  },
+  {
+    id: "lee-hyeri",
+    name: "혜리",
+    nameEn: "Lee Hye-ri",
+    gender: "female",
+    image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=800&auto=format&fit=crop&q=60",
+    followers: "7.2M",
+    bio: "걸스데이 출신으로 통통 튀는 매력과 자연스러운 생활 연기를 보여주는 배우입니다. '응답하라 1988'의 덕선 역으로 인생 캐릭터를 만났습니다.",
+    works: [
+      { year: 2021, title: "간 떨어지는 동거", role: "이담", type: "Drama" },
+      { year: 2015, title: "응답하라 1988", role: "성덕선", type: "Drama" }
+    ],
+    news: [
+      { title: "혜리, 예능과 드라마 오가며 맹활약", date: "2026.07.12", link: "#" }
+    ]
+  },
+  {
+    id: "song-joongki",
+    name: "송중기",
+    nameEn: "Song Joong-ki",
+    gender: "male",
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&auto=format&fit=crop&q=60",
+    followers: "11.1M",
+    bio: "부드러운 카리스마와 뛰어난 연기력으로 글로벌 팬덤을 보유한 한류 스타입니다. '빈센조', '재벌집 막내아들' 등에서 대체 불가한 매력을 선보였습니다.",
+    works: [
+      { year: 2022, title: "재벌집 막내아들", role: "진도준 / 윤현우", type: "Drama" },
+      { year: 2021, title: "빈센조", role: "빈센조 까사노", type: "Drama" }
+    ],
+    news: [
+      { title: "송중기, 해외 영화제 초청... 글로벌 행보", date: "2026.05.22", link: "#" }
+    ]
+  },
+  {
+    id: "song-hyekyo",
+    name: "송혜교",
+    nameEn: "Song Hye-kyo",
+    gender: "female",
+    image: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=800&auto=format&fit=crop&q=60",
+    followers: "15.4M",
+    bio: "대한민국을 대표하는 최고의 여배우 중 한 명으로, 압도적인 비주얼과 깊이 있는 연기력을 자랑합니다. '더 글로리'를 통해 연기 변신에 성공하며 극찬을 받았습니다.",
+    works: [
+      { year: 2022, title: "더 글로리", role: "문동은", type: "Drama" },
+      { year: 2016, title: "태양의 후예", role: "강모연", type: "Drama" }
+    ],
+    news: [
+      { title: "송혜교, 차기작 스크린 복귀 검토 중", date: "2026.06.30", link: "#" }
+    ]
+  },
+  {
+    id: "park-jihyun",
+    name: "박지현",
+    nameEn: "Park Ji-hyun",
+    gender: "female",
+    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=800&auto=format&fit=crop&q=60",
+    followers: "2.1M",
+    bio: "세련된 마스크와 안정적인 연기력으로 주목받는 라이징 스타입니다. '재벌집 막내아들'에서 모현민 역으로 강렬한 인상을 남겼습니다.",
+    works: [
+      { year: 2024, title: "재벌X형사", role: "이강현", type: "Drama" },
+      { year: 2022, title: "재벌집 막내아들", role: "모현민", type: "Drama" }
+    ],
+    news: [
+      { title: "박지현, '재벌X형사' 시즌 2 합류 확정", date: "2026.07.01", link: "#" }
+    ]
+  },
+  {
+    id: "park-boyoung",
+    name: "박보영",
+    nameEn: "Park Bo-young",
+    gender: "female",
+    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=800&auto=format&fit=crop&q=60",
+    followers: "9.8M",
+    bio: "'뽀블리'라는 애칭으로 불리는 사랑스러운 매력의 소유자입니다. 로맨틱 코미디부터 힐링 드라마까지 완벽하게 소화하는 믿고 보는 배우입니다.",
+    works: [
+      { year: 2023, title: "정신병동에도 아침이 와요", role: "정다은", type: "Drama" },
+      { year: 2017, title: "힘쎈여자 도봉순", role: "도봉순", type: "Drama" }
+    ],
+    news: [
+      { title: "박보영, 따뜻한 선행... 꾸준한 기부 행보", date: "2026.05.05", link: "#" }
+    ]
+  },
+  {
+    id: "kim-goeun",
+    name: "김고은",
+    nameEn: "Kim Go-eun",
+    gender: "female",
+    image: "https://images.unsplash.com/photo-1517365830460-955ce3ccd263?w=800&auto=format&fit=crop&q=60",
+    followers: "8.1M",
+    bio: "독보적인 분위기와 스펙트럼 넓은 연기력으로 스크린과 브라운관을 종횡무진하는 배우입니다. '도깨비', '파묘' 등으로 흥행 보증수표로 자리 잡았습니다.",
+    works: [
+      { year: 2024, title: "파묘", role: "이화림", type: "Movie" },
+      { year: 2016, title: "도깨비", role: "지은탁", type: "Drama" }
+    ],
+    news: [
+      { title: "김고은, '파묘'로 천만 배우 등극", date: "2026.03.24", link: "#" }
+    ]
+  },
+  {
+    id: "gong-yoo",
+    name: "공유",
+    nameEn: "Gong Yoo",
+    gender: "male",
+    image: "https://images.unsplash.com/photo-1488161628813-04466f872be2?w=800&auto=format&fit=crop&q=60",
+    followers: "10.5M",
+    bio: "아시아 전역에서 사랑받는 톱스타로, 깊은 눈빛과 부드러운 목소리가 매력적인 배우입니다. '도깨비', '커피프린스 1호점' 등 레전드 작품을 남겼습니다.",
+    works: [
+      { year: 2024, title: "트렁크", role: "한정원", type: "Drama" },
+      { year: 2016, title: "도깨비", role: "김신", type: "Drama" }
+    ],
+    news: [
+      { title: "공유, 넷플릭스 신작 캐스팅 확정", date: "2026.04.18", link: "#" }
+    ]
+  },
+  {
+    id: "park-eunbin",
+    name: "박은빈",
+    nameEn: "Park Eun-bin",
+    gender: "female",
+    image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&auto=format&fit=crop&q=60",
+    followers: "5.5M",
+    bio: "아역 시절부터 다져온 탄탄한 기본기와 성실함으로 매 작품마다 한계 없는 캐릭터 소화력을 보여주는 명품 배우입니다. '이상한 변호사 우영우'로 신드롬을 일으켰습니다.",
+    works: [
+      { year: 2023, title: "무인도의 디바", role: "서목하", type: "Drama" },
+      { year: 2022, title: "이상한 변호사 우영우", role: "우영우", type: "Drama" }
+    ],
+    news: [
+      { title: "박은빈, 백상예술대상 대상의 품격", date: "2026.05.01", link: "#" }
+    ]
+  },
+  {
+    id: "hwang-inyoup",
+    name: "황인엽",
+    nameEn: "Hwang In-youp",
+    gender: "male",
+    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=800&auto=format&fit=crop&q=60",
+    followers: "14.2M",
+    bio: "매력적인 무쌍꺼풀과 남다른 비율로 여심을 저격하는 차세대 글로벌 스타입니다. '여신강림'으로 해외 팬들에게 큰 사랑을 받았습니다.",
+    works: [
+      { year: 2024, title: "조립식 가족", role: "김산하", type: "Drama" },
+      { year: 2020, title: "여신강림", role: "한서준", type: "Drama" }
+    ],
+    news: [
+      { title: "황인엽, 아시아 팬미팅 투어 성황리에 마무리", date: "2026.02.14", link: "#" }
+    ]
+  },
+  {
+    id: "bae-inhyuk",
+    name: "배인혁",
+    nameEn: "Bae In-hyuk",
+    gender: "male",
+    image: "https://images.unsplash.com/photo-1508341591423-4347099e1f19?w=800&auto=format&fit=crop&q=60",
+    followers: "3.4M",
+    bio: "안정적인 연기력과 훈훈한 외모로 쉴 틈 없이 열일 행보를 이어가는 라이징 스타입니다. '슈룹', '치얼업' 등에서 활약했습니다.",
+    works: [
+      { year: 2023, title: "열녀박씨 계약결혼뎐", role: "강태하", type: "Drama" },
+      { year: 2022, title: "치얼업", role: "박정우", type: "Drama" }
+    ],
+    news: [
+      { title: "배인혁, 로맨틱 코미디 주연 발탁", date: "2026.07.19", link: "#" }
+    ]
   }
 ];
 
