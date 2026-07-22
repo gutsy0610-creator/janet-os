@@ -13,56 +13,56 @@ function cn(...inputs: ClassValue[]) {
 const mockActors = [
   {
     id: "park-jihoon",
-    name: "Park Jihoon",
-    nameKo: "박지훈",
-    image: "/images_왕사남.jfif",
-    cover: "https://images.unsplash.com/photo-1620121692029-d088224ddc74?w=1600&auto=format&fit=crop&q=80",
-    bio: "Park Ji-hoon is a South Korean singer and actor. Known for his stellar performance in 'The Man Who Lives With the King' and 'Weak Hero Class 1', he continues to impress with his wide acting spectrum.",
-    followers: "3.2M",
+    name: "박지훈",
+    nameEn: "Park Ji-hoon",
+    image: "/박지훈.jpg",
+    followers: "4.2M",
+    bio: "아역 배우 출신으로 '프로듀스 101 시즌 2'를 통해 워너원으로 데뷔하며 큰 사랑을 받았습니다. 이후 '약한영웅 Class 1', '환상연가' 등에서 탄탄한 연기력을 인정받았으며, 영화 '왕과 사는 남자'를 통해 2026년 백상예술대상 신인상을 거머쥐며 대세 배우로 자리매김했습니다.",
     works: [
-      { year: 2026, title: "The Man Who Lives With the King", type: "Movie", role: "King" },
-      { year: 2024, title: "Fantasy Sonata", type: "Drama", role: "Sajo Hyun / Ak-hee" },
-      { year: 2022, title: "Weak Hero Class 1", type: "Drama", role: "Yeon Shi-eun" },
+      { year: 2026, title: "왕과 사는 남자", role: "단종", type: "Movie" },
+      { year: 2024, title: "환상연가", role: "사조 현 / 악희", type: "Drama" },
+      { year: 2022, title: "약한영웅 Class 1", role: "연시은", type: "Drama" },
+      { year: 2021, title: "멀리서 보면 푸른 봄", role: "여준", type: "Drama" }
     ],
     news: [
-      { title: "Park Jihoon wins Best New Actor at Baeksang Arts Awards", date: "1 day ago" },
-      { title: "TVING 'Legend of the Cook' hits No.1 in viewership ratings", date: "2 hours ago" },
+      { title: "박지훈, '왕사남'으로 백상예술대상 신인상 수상 영예", date: "2026.05.08" },
+      { title: "박지훈, 차기작 검토 중... '장르물 도전 예고'", date: "2026.04.15" }
     ]
   },
   {
     id: "seo-inguk",
-    name: "Seo In-guk",
-    nameKo: "서인국",
-    image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=800&auto=format&fit=crop&q=60",
-    cover: "https://images.unsplash.com/photo-1550684848-fac1c5b4e853?w=1600&auto=format&fit=crop&q=80",
-    bio: "Seo In-guk is a South Korean singer-songwriter and actor. He launched his singing career after winning the talent reality show Superstar K in 2009, and made his acting breakthrough in Reply 1997.",
-    followers: "4.1M",
+    name: "서인국",
+    nameEn: "Seo In-guk",
+    image: "/서인국.jpg",
+    followers: "5.1M",
+    bio: "2009년 '슈퍼스타K' 우승으로 데뷔한 후, tvN '응답하라 1997'의 윤윤제 역으로 신드롬을 일으키며 배우로서 성공적으로 안착했습니다. 특유의 디테일한 감정 연기와 매력적인 마스크로 '이재, 곧 죽습니다', '쇼핑왕 루이' 등 다양한 장르를 완벽하게 소화하고 있습니다.",
     works: [
-      { year: 2023, title: "Death's Game", type: "Drama", role: "Choi Yee-jae" },
-      { year: 2022, title: "Café Minamdang", type: "Drama", role: "Nam Han-joon" },
-      { year: 2021, title: "Doom at Your Service", type: "Drama", role: "Myul Mang" },
+      { year: 2023, title: "이재, 곧 죽습니다", role: "최이재", type: "Drama" },
+      { year: 2022, title: "미남당", role: "남한준", type: "Drama" },
+      { year: 2021, title: "어느 날 우리 집 현관으로 멸망이 들어왔다", role: "멸망", type: "Drama" },
+      { year: 2012, title: "응답하라 1997", role: "윤윤제", type: "Drama" }
     ],
     news: [
-      { title: "Seo In-guk hints at a new music album release", date: "3 days ago" },
-      { title: "Upcoming fan meeting tour announced for Asia", date: "2 weeks ago" },
+      { title: "서인국, 새 드라마 '내일도 출근' 합류 검토 중", date: "2026.06.20" },
+      { title: "서인국 팬미팅 성료, 글로벌 팬들과 특별한 시간", date: "2026.03.11" }
     ]
   },
   {
     id: "byun-wooseok",
-    name: "Byun Woo-seok",
-    nameKo: "변우석",
+    name: "변우석",
+    nameEn: "Byun Woo-seok",
     image: "/변우석.jfif",
-    cover: "https://images.unsplash.com/photo-1518621736915-f3b1c41bfd00?w=1600&auto=format&fit=crop&q=80",
-    bio: "Byun Woo-seok is a South Korean actor and model. He gained massive popularity through his role as Ryu Sun-jae in the hit drama 'Lovely Runner'.",
-    followers: "5.8M",
+    followers: "6.8M",
+    bio: "모델 출신 배우로 훤칠한 키와 독보적인 피지컬, 그리고 따뜻한 눈빛 연기로 여심을 사로잡고 있습니다. tvN '선재 업고 튀어'의 류선재 역으로 글로벌 신드롬을 일으키며 단숨에 톱스타 반열에 올랐습니다. 로맨스부터 스릴러까지 한계 없는 연기 스펙트럼을 보여주고 있습니다.",
     works: [
-      { year: 2024, title: "Lovely Runner", type: "Drama", role: "Ryu Sun-jae" },
-      { year: 2023, title: "Strong Girl Nam-soon", type: "Drama", role: "Ryu Shi-oh" },
-      { year: 2022, title: "20th Century Girl", type: "Movie", role: "Poong Woon-ho" },
+      { year: 2024, title: "선재 업고 튀어", role: "류선재", type: "Drama" },
+      { year: 2023, title: "힘쎈여자 강남순", role: "류시오", type: "Drama" },
+      { year: 2022, title: "20세기 소녀", role: "풍운호", type: "Movie" },
+      { year: 2020, title: "청춘기록", role: "원해효", type: "Drama" }
     ],
     news: [
-      { title: "Byun Woo-seok's 'Lovely Runner' syndrome continues globally", date: "5 hours ago" },
-      { title: "Selected as the new global ambassador for luxury brand", date: "1 week ago" },
+      { title: "변우석, 아시아 투어 팬미팅 성황리에 마무리", date: "2026.05.22" },
+      { title: "변우석, 차기작 로맨틱 코미디 주인공 물망", date: "2026.07.01" }
     ]
   }
 ];
@@ -88,7 +88,7 @@ export default function ActorsDirectory() {
             <div className="w-8 h-8 rounded-full overflow-hidden bg-background">
               <img src={actor.image} alt={actor.name} className="w-full h-full object-cover" />
             </div>
-            <span className="font-semibold">{actor.nameKo}</span>
+            <span className="font-bold text-sm tracking-wide">{actor.name}</span>
           </button>
         ))}
       </div>
@@ -103,17 +103,16 @@ export default function ActorsDirectory() {
           className="space-y-12"
         >
           {/* Profile Header */}
-          <div className="relative h-64 rounded-3xl overflow-hidden mt-8 mb-16">
+          <div className="relative h-64 rounded-3xl overflow-hidden mt-8 mb-16 bg-card">
             <div className="absolute inset-0 bg-gradient-to-r from-card to-card/50" />
-            <div className="absolute inset-0 bg-cover bg-center mix-blend-overlay opacity-30" style={{ backgroundImage: `url('${selectedActor.cover}')` }} />
             
             <div className="absolute -bottom-16 left-8 flex items-end gap-6">
               <div className="w-40 h-40 rounded-full border-4 border-background overflow-hidden bg-card shadow-2xl">
                 <img src={selectedActor.image} alt={selectedActor.name} className="w-full h-full object-cover" />
               </div>
               <div className="mb-4">
-                <h2 className="text-4xl font-bold text-white mb-1">{selectedActor.name}</h2>
-                <p className="text-xl text-secondary">{selectedActor.nameKo}</p>
+                <h2 className="text-4xl font-bold text-white mb-2">{selectedActor.name}</h2>
+                <p className="text-xl text-gray-400 font-medium">{selectedActor.nameEn}</p>
               </div>
             </div>
             
