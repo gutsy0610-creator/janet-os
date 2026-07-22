@@ -10,7 +10,7 @@ function cn(...inputs: ClassValue[]) {
 }
 
 const mockDramas = [
-  { title: "선재 업고 튀어", year: 2024, episodes: 16, genre: "Time Slip / Rom-Com", rating: 4.9, image: "https://images.unsplash.com/photo-1518621736915-f3b1c41bfd00?w=800&auto=format&fit=crop&q=60", link: "https://www.tving.com/search?keyword=%EC%84%A0%EC%9E%AC%20%EC%97%85%EA%B3%A0%20%ED%8A%80%EC%96%B4" },
+  { title: "선재 업고 튀어", year: 2024, episodes: 16, genre: "Time Slip / Rom-Com", rating: 4.9, image: "/선업튀.png", link: "https://www.tving.com/search?keyword=%EC%84%A0%EC%9E%AC%20%EC%97%85%EA%B3%A0%20%ED%8A%80%EC%96%B4" },
   { title: "눈물의 여왕", year: 2024, episodes: 16, genre: "Romance / Drama", rating: 4.8, image: "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=800&auto=format&fit=crop&q=60", link: "https://www.tving.com/search?keyword=%EB%88%88%EB%AC%BC%EC%9D%98%20%EC%97%AC%EC%99%95" },
   { title: "내 남편과 결혼해줘", year: 2024, episodes: 16, genre: "Revenge / Fantasy", rating: 4.9, image: "https://images.unsplash.com/photo-1543807535-eceef0bc6599?w=800&auto=format&fit=crop&q=60", link: "https://www.tving.com/search?keyword=%EB%82%B4%20%EB%82%A8%ED%8E%B8%EA%B3%BC%20%EA%B2%B0%ED%98%BC%ED%95%B4%EC%A4%98" },
   { title: "이재, 곧 죽습니다", year: 2023, episodes: 8, genre: "Fantasy / Thriller", rating: 4.7, image: "https://images.unsplash.com/photo-1616422285623-13ff0162193c?w=800&auto=format&fit=crop&q=60", link: "https://www.tving.com/search?keyword=%EC%9D%B4%EC%9E%AC%20%EA%B3%A7%20%EC%A3%BD%EC%8A%B5%EB%8B%88%EB%8B%A4" },
