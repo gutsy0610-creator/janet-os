@@ -15,6 +15,7 @@ const mockActors = [
     id: "park-jihoon",
     name: "박지훈",
     nameEn: "Park Ji-hoon",
+    gender: "male",
     image: "/박지훈.jpg",
     followers: "4.2M",
     bio: "아역 배우 출신으로 '프로듀스 101 시즌 2'를 통해 워너원으로 데뷔하며 큰 사랑을 받았습니다. 이후 '약한영웅 Class 1', '환상연가' 등에서 탄탄한 연기력을 인정받았으며, 영화 '왕과 사는 남자'를 통해 2026년 백상예술대상 신인상을 거머쥐며 대세 배우로 자리매김했습니다.",
@@ -35,6 +36,7 @@ const mockActors = [
     id: "seo-inguk",
     name: "서인국",
     nameEn: "Seo In-guk",
+    gender: "male",
     image: "/서인국.jpg",
     followers: "5.1M",
     bio: "2009년 '슈퍼스타K' 우승으로 데뷔한 후, tvN '응답하라 1997'의 윤윤제 역으로 신드롬을 일으키며 대중의 큰 사랑을 받았습니다. 특유의 섬세한 감정 연기와 매력적인 눈빛으로 '이재, 곧 죽습니다'의 최이재 역, '미남당'의 남한준 역 등을 완벽하게 소화하며 한계 없는 캐릭터 소화력을 보여주고 있습니다.",
@@ -53,6 +55,7 @@ const mockActors = [
     id: "byun-wooseok",
     name: "변우석",
     nameEn: "Byun Woo-seok",
+    gender: "male",
     image: "/변우석.jfif",
     followers: "6.8M",
     bio: "모델 출신 배우로 훤칠한 키와 독보적인 피지컬, 그리고 따뜻한 눈빛 연기로 여심을 사로잡고 있습니다. tvN '선재 업고 튀어'의 류선재 역으로 글로벌 신드롬을 일으키며 단숨에 톱스타 반열에 올랐습니다. 로맨스부터 스릴러까지 한계 없는 연기 스펙트럼을 보여주고 있습니다.",
@@ -66,17 +69,89 @@ const mockActors = [
       { title: "변우석, '나 혼자만 레벨업' 실사판 캐스팅 확정... 한소희와 호흡", date: "2026.06.10", link: "https://www.osen.co.kr/article/G1112345678" },
       { title: "변우석, 'GQ KOREA' 화보서 파격적인 장발 젠더리스 스타일 완벽 소화", date: "2026.07.15", link: "https://www.chosun.com/entertainments/entertain_photo/2026/07/15/P9C4L1Q8X2N6M3K/" }
     ]
+  },
+  {
+    id: "kim-jiwon",
+    name: "김지원",
+    nameEn: "Kim Ji-won",
+    gender: "female",
+    image: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=800&auto=format&fit=crop&q=60",
+    followers: "10.2M",
+    bio: "탄탄한 연기력과 아름다운 비주얼로 큰 사랑을 받고 있는 배우입니다. '눈물의 여왕', '나의 해방일지' 등 다수의 흥행작에서 주연을 맡으며 믿고 보는 배우로 자리매김했습니다.",
+    works: [
+      { year: 2024, title: "눈물의 여왕", role: "홍해인", type: "Drama" },
+      { year: 2022, title: "나의 해방일지", role: "염미정", type: "Drama" },
+      { year: 2020, title: "도시남녀의 사랑법", role: "이은오", type: "Drama" }
+    ],
+    news: [
+      { title: "김지원, 차기작 검토 중... 글로벌 팬미팅 성료", date: "2026.08.01", link: "#" }
+    ]
+  },
+  {
+    id: "lee-jieun",
+    name: "이지은 (아이유)",
+    nameEn: "Lee Ji-eun (IU)",
+    gender: "female",
+    image: "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=800&auto=format&fit=crop&q=60",
+    followers: "32.5M",
+    bio: "가수 겸 배우로 대체 불가한 매력을 지닌 아티스트입니다. '나의 아저씨', '호텔 델루나'에 이어 다수의 작품에서 깊이 있는 연기를 선보이며 대중과 평단의 호평을 동시에 받고 있습니다.",
+    works: [
+      { year: 2025, title: "폭싹 속았수다", role: "애순", type: "Drama" },
+      { year: 2022, title: "브로커", role: "소영", type: "Movie" },
+      { year: 2019, title: "호텔 델루나", role: "장만월", type: "Drama" },
+      { year: 2018, title: "나의 아저씨", role: "이지안", type: "Drama" }
+    ],
+    news: [
+      { title: "아이유, 새 앨범 발매와 동시에 연기 활동 박차", date: "2026.07.10", link: "#" }
+    ]
   }
 ];
 
 export default function ActorsDirectory() {
-  const [selectedActor, setSelectedActor] = useState(mockActors[0]);
+  const [genderFilter, setGenderFilter] = useState<"all" | "male" | "female">("all");
+  
+  // Filter and sort actors
+  const filteredActors = mockActors
+    .filter(actor => genderFilter === "all" || actor.gender === genderFilter)
+    .sort((a, b) => a.name.localeCompare(b.name, 'ko-KR'));
+
+  const [selectedActor, setSelectedActor] = useState(filteredActors[0]);
+
+  const handleFilterChange = (filter: "all" | "male" | "female") => {
+    setGenderFilter(filter);
+    const newFiltered = mockActors
+      .filter(actor => filter === "all" || actor.gender === filter)
+      .sort((a, b) => a.name.localeCompare(b.name, 'ko-KR'));
+    
+    // Automatically select the first actor in the new filtered list if the current one is not present
+    if (!newFiltered.find(a => a.id === selectedActor.id)) {
+      setSelectedActor(newFiltered[0]);
+    }
+  };
 
   return (
     <div className="p-8 max-w-7xl mx-auto w-full space-y-8 pb-24">
+      {/* Gender Filter Tabs */}
+      <div className="flex gap-2 border-b border-white/10 pb-4">
+        {(['all', 'male', 'female'] as const).map((filter) => (
+          <button
+            key={filter}
+            onClick={() => handleFilterChange(filter)}
+            className={cn(
+              "px-5 py-2 rounded-xl text-sm font-bold transition-all border",
+              genderFilter === filter
+                ? "bg-accent/20 border-accent text-white shadow-lg shadow-accent/10"
+                : "bg-card/50 border-white/10 text-secondary hover:bg-card hover:text-white"
+            )}
+          >
+            {filter === 'all' ? '전체' : filter === 'male' ? '남자 배우' : '여자 배우'}
+          </button>
+        ))}
+      </div>
+
       {/* Actor Selection Tabs */}
       <div className="flex gap-4 overflow-x-auto pb-2 scrollbar-hide">
-        {mockActors.map((actor) => (
+        {filteredActors.map((actor) => (
           <button
             key={actor.id}
             onClick={() => setSelectedActor(actor)}
@@ -87,7 +162,7 @@ export default function ActorsDirectory() {
                 : "bg-card/50 border-white/10 text-secondary hover:bg-card hover:text-white"
             )}
           >
-            <div className="w-8 h-8 rounded-full overflow-hidden bg-background">
+            <div className="w-8 h-8 rounded-full overflow-hidden bg-background shrink-0">
               <img src={actor.image} alt={actor.name} className="w-full h-full object-cover" />
             </div>
             <span className="font-bold text-sm tracking-wide">{actor.name}</span>
